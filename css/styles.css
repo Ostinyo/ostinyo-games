@@ -484,7 +484,14 @@
     .section__about-me,
     .Section__Worlds-top {
         min-height: 50vh;
-        margin-top: 10em;
+        margin-top: 5em;
+    }
+
+	@media (orientation:portrait) {
+
+        .Section__Worlds-top {
+			margin-top: 25em;
+		}
     }
 
 /* #endregion */
@@ -748,7 +755,7 @@
 /* #region World Nav */
     .worldnav {
         position: absolute;
-        top: 150px;
+        top: 130px;
         left: 50%;
         width: 80%;
         list-style-type: none;
@@ -760,7 +767,7 @@
         text-align: center;
         z-index: .5;
         
-        transform: translate(-50%, -85%);
+        transform: translate(-50%, -10%);
         transition: transform 500ms ease-in-out;
     }
 
@@ -798,7 +805,7 @@
     @media (orientation: landscape) {
         .worldnav {
             position: relative;
-            top: 150px;
+            top: 100px;
             left: 50%;
             transform: translateX(-50%);
             width: fit-content;
@@ -809,6 +816,7 @@
             border-radius: 0 0 1em 1em;
             background-color: rgba(var(--clr-dark), 80%);
             text-align: center;
+			font-size: var(--fs-h3);
         }
         #more-arrows {
             display: none;
@@ -829,11 +837,11 @@
         color: rgb(var(--clr-light));
         font-weight: var(--fw-bold);
         text-align: center;
-        padding: 16px;
+        padding: 32px;
         text-decoration: none;
         border-radius: 1em;
         transform: scale(1);
-        transition: transform 500ms ease-in-out, background-color 500ms ease-in-out, color 500ms ease-in-out;
+        transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, color 200ms ease-in-out;
     }
 
     .worldnav li a:hover {
