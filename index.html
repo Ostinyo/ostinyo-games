@@ -35,9 +35,9 @@
                 <a href="mailto:ostinyo@gmail.com">Contact</a>
             </nav>
             <div class="socials">
-                <a href="https://Twitter.com/Ostinyo"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a>
-
+                <a href="https://Twitter.com/Ostinyo"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i></a>
+				<a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a>
             </div>
             <button class="hamburger hamburger--slider" type="button">
                 <span class="hamburger-box">
@@ -74,12 +74,14 @@
 
             <div class="section section__twitter">
                 <div class="section__content">
-                    <h1>Keep up to date! &nbsp; <a href="https://twitter.com/ostinyo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @ostinyo</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <h1>Keep up to date! &nbsp;
+						<a href="https://twitter.com/ostinyo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @Ostinyo</a>
+						<a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </h1>
                     <div class="section__content__text">
                         <p>
-                            I post world updates and launch announcements on Twitter and Discord. <br> Follow me on Twitter for the latest news!<br><br>
+                            I post world updates and launch announcements on Twitter, Bluesky and Discord. <br> Follow me on Twitter/Bluesky for the latest news!<br><br>
                         </p>
                     </div>
 					<h1>Join my community! &nbsp; <a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a></h1>
@@ -90,8 +92,16 @@
                     </div>
                 </div>
                 <div class="section__img twitter__img">
-                    <a class="twitter-timeline" data-width="80%" data-height="1000" data-theme="dark" href="https://twitter.com/Ostinyo?ref_src=twsrc%5Etfw">Tweets by Ostinyo</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <!--<a class="twitter-timeline" data-width="80%" data-height="1000" data-theme="dark" href="https://twitter.com/Ostinyo?ref_src=twsrc%5Etfw">Tweets by Ostinyo</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+					
+					<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
+					<bsky-embed
+						username="ostinyo.bsky.social"
+						mode="dark"
+						limit="5"
+					>
+					</bsky-embed>
                 </div>
             </div>
         </section>
