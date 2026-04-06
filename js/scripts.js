@@ -20,7 +20,7 @@ window.onload = function () {
     if(mobilemenubutton != null) {
         mobilemenubutton.addEventListener("click", unfoldMenu);
     }
-    containersize = [imagecontainers.lenth]
+    containersize = [imagecontainers.length]
     dotcontainers = [containersize]
     for (let i = 0; i < imagecontainers.length; i++) {
         imageContainerSetup(imagecontainers[i], i)
@@ -47,7 +47,9 @@ window.onload = function () {
     }
 }
 //buttons and link listeners
-topbutton.addEventListener("click", ToTop);
+if (topbutton) {
+    topbutton.addEventListener("click", ToTop);
+}
 mobilebutton.addEventListener("click", ToggleNav);
 document.addEventListener("scroll", handleScroll);
 
@@ -101,7 +103,7 @@ function isElementInViewport(el) {
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= window.innerWidth || document.documentElement.clientWidth_
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
 
@@ -263,7 +265,7 @@ async function imageForward(el, imgContainer, contsize, imgcontarrloc) {
         imgContainer.style = 'transform: translateX(' + trans + 'vw)'
         await delay(speed)
         imgContainer.classList.add('notransition');
-        imgContainer.style = 'transform: translatex(0vw)'
+        imgContainer.style = 'transform: translateX(0vw)'
         await delay(20)
         imgContainer.classList.remove('notransition')
         trans = 0
