@@ -722,7 +722,7 @@ header {
     border: 1px solid var(--clr-border);
     border-radius: var(--radius);
     overflow: hidden;
-    max-height: 540px;
+    max-height: 600px;
     overflow-y: auto;
 }
 .bluesky-panel::-webkit-scrollbar { width: 4px; }
