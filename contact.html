@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ostinyo | Contact</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/54ff652683.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="img/favicon.png" alt="Ostinyo icon">
+            <span>Ostinyo</span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="worlds.html">Worlds</a>
+            <a href="games.html">Games</a>
+            <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="rightcorner">
+            <a href="membership.html" class="btn-membership">Join Membership</a>
+            <div class="socials">
+                <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <button class="hamburger" type="button" aria-label="Toggle navigation">
+                <span class="hamburger-bars"><span></span><span></span><span></span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="worlds.html">Worlds</a>
+        <a href="games.html">Games</a>
+        <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a>
+        <a href="contact.html">Contact</a>
+        <div class="menu-socials">
+            <a href="https://Twitter.com/Ostinyo" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ostinyo.bsky.social" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://discord.com/invite/qnQSGDnHjm" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+        </div>
+    </div>
+
+    <div class="page-banner">
+        <div class="page-banner__bg"></div>
+        <div class="page-banner__content">
+            <h1>Contact</h1>
+            <p>Have a question or business inquiry? Fill out the form below to contact me.</p>
+        </div>
+    </div>
+
+    <main class="page-content" style="padding-top:0">
+        <div class="section">
+
+            <form id="contactForm" class="contact-form"
+                  action="https://formspree.io/f/mlgoznpd"
+                  method="POST">
+
+                <input type="hidden" name="_subject" value="New contact form submission">
+
+                <div class="form-group">
+                    <label id="reason-label">Reason for contacting</label>
+                    <input type="hidden" name="reason" id="reasonInput">
+                    <div class="select-wrap custom-select" role="combobox" aria-haspopup="listbox"
+                         aria-expanded="false" aria-labelledby="reason-label" tabindex="0">
+                        <span class="custom-select__value custom-select__placeholder">Select a reason…</span>
+                        <i class="fa-solid fa-chevron-down custom-select__caret"></i>
+                        <ul class="custom-select__options" role="listbox" aria-labelledby="reason-label">
+                            <li class="custom-select__option" role="option" data-value="Membership Help">Membership Help</li>
+                            <li class="custom-select__option" role="option" data-value="Advertising Inquiry">Advertising Inquiry</li>
+                            <li class="custom-select__option" role="option" data-value="Other">Other</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Send Message</button>
+
+            </form>
+
+            <div id="form-status" class="form-status" hidden></div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <div class="logo">
+                    <img src="img/favicon.png" alt="Ostinyo icon">
+                    <span>Ostinyo</span>
+                </div>
+            </div>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="worlds.html">Worlds</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer__socials">
+                <h4>Socials</h4>
+                <div class="footer__socials-icons">
+                    <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                    <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener" aria-label="Patreon"><i class="fa-brands fa-patreon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">© 2026 Ostinyo Studios</div>
+    </footer>
+
+    <button class="back-to-top btn btn--ghost" id="To-Top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

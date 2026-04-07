@@ -1,464 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ostinyo | Worlds</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="icon" href="./img/favicon.png" type="img/png" />
-
-    <!-- Font Awesome-->
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/54ff652683.js" crossorigin="anonymous"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
 <body>
-    <style>
-        body {
-            background-image: url(./img/bg2.png);
-        }
 
-        .section {
-            flex-direction: column;
-
-            align-items: center;
-        }
-    </style>
-    <header id="header" class="header">
-        <a href="./">
-            <div class="logo">
-                <img src="img/favicon.png" alt="Ostinyo Icon">
-                <h3>Ostinyo Games</h3>
-            </div>
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="img/favicon.png" alt="Ostinyo icon">
+            <span>Ostinyo</span>
         </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="worlds.html" class="active">Worlds</a>
+            <a href="games.html">Games</a>
+            <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
         <div class="rightcorner">
-            <nav class="desktop-nav">
-                <a href="./">Home</a>
-                <span class="vertical-line"></span>
-                <a href='./worlds'>Worlds</a>
-                <span class="vertical-line"></span>
-                <a href="https://www.patreon.com/Ostinyo">Patreon</a>
-				<span class="vertical-line"></span>
-                <a href="mailto:contact@ostinyo.com">Contact</a>
-            </nav>
+            <a href="membership.html" class="btn-membership">Join Membership</a>
             <div class="socials">
-                <a href="https://Twitter.com/Ostinyo"><i class="fa-brands fa-x-twitter"></i></a>
-				<a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i></a>
-				<a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
             </div>
-            <button class="hamburger hamburger--slider" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
+            <button class="hamburger" type="button" aria-label="Toggle navigation">
+                <span class="hamburger-bars"><span></span><span></span><span></span></span>
             </button>
         </div>
     </header>
+
     <div class="menu">
-        <a href="./">Home</a>
-        <a href='./worlds'>Worlds</a>
-        <a href="https://www.patreon.com/Ostinyo">Patreon</a>
-        <a href="mailto:contact@ostinyo.com">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="worlds.html">Worlds</a>
+        <a href="games.html">Games</a>
+        <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a>
+        <a href="contact.html">Contact</a>
         <div class="menu-socials">
-            <a href="https://Twitter.com/Ostinyo"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i></a>
-            <a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://Twitter.com/Ostinyo" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ostinyo.bsky.social" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://discord.com/invite/qnQSGDnHjm" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
         </div>
     </div>
 
-    <div class="body">
-        <ul class="worldnav">
-            <div class="links">
-                <li><a href="#pvpworlds">PVP Worlds</a></li>
-                <li><a href="#puttputt">Putt Putt Worlds</a></li>
-                <li><a href="#Halloween">Halloween Worlds</a></li>
-                <li><a href="#other">Other Worlds</a></li>
-                <li id="arrow">
-                    <svg id="more-arrows">
-                        <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
-                      </svg>
-                </li>
-            </div>
-        </ul>
-        <section class="Body">
-            <div id="pvpworlds" class="section Section__Worlds-top">
-                <h1>PVP Worlds</h1>
-                <div class="viewport">
-                    <div class="arrowleft"></div>
-                    <div class="arrowright"></div>
-                    <div class="image-container">
-						<div class="card">
-                            <img src="img/Worlds/Blackout.png" alt="Blackout">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Blackout!</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Murderers are on the looseǃ When the lights go out‚ they'll make their moveǃ Work together to put a stop to their killing spreeǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_e9093447-5e69-4eec-8262-358a4ad72db9';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/PrisonEscape.png" alt="Prison Escape">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Prison Escape</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Join the fight between Prisoners and Guards in this VR prisonǃ Plot your escape with friends or keep the prisoners in lineǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_14750dd6-26a1-4edb-ae67-cac5bcd9ed6a';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/SquidGameRLGL.png" alt="SquidGameRLGL">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Squid Game RL/GL</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Play a rendition of the game Red Light‚ Green Light based on the hit Netflix series "Squid Game"ǃ Who will be the first to reach the finish line?
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_c8c1c373-dd05-4095-a5f9-57cc1e2dcc33';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card wrap">
-                            <!-- Do not touch (Copies first image) -->
-                            <img src="" alt="">
-                            <!--copy-->
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1></h1>
-                                    <!--copy-->
-                                </div>
-                                <div class="desc">
-                                    <p>
-
-                                    </p>
-                                    <!--copy-->
-                                </div>
-                                <div class="button">
-                                    <button onclick="">
-                                        <!--copy-->
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="puttputt" class="section">
-                <h1>Putt Putt Worlds</h1>
-                <div class="viewport">
-                    <div class="arrowleft"></div>
-                    <div class="arrowright"></div>
-                    <div class="image-container">
-                        <div class="card">
-                            <img src="img/Worlds/PuttPuttPond.png" alt="PuttPuttPond">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Putt Putt Pond</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Golf with friends․․․ in VRǃ Play on two 18 hole courses with fully scripted mini golf plus other gamesǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_ab68f896-a21f-4d72-a016-5a0a42c3158f';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/PuttPuttQuest.png" alt="PuttPuttQuest">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Putt Putt Quest</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Mini golf in VRǃ Tackle my second mini golf world‚ now with Quest compatibilityǃ Includes desktop controls for non-VR players․ Good luck golfingǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_70353369-ba69-46ab-a20b-f6112c82adba';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/PuttPuttQuestNight.png" alt="PuttPuttQuestNight">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Putt Putt Quest Night</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Mini golf in the darkǃ Nighttime has fallen in the kingdom and golf balls glow in the darkǃ Do your bestǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_0e813689-822d-4537-8e36-ce2f6e5db4d5';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card wrap">
-                            <!-- Do not touch (Copies first image) -->
-                            <img src="" alt="">
-                            <!--copy-->
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1></h1>
-                                    <!--copy-->
-                                </div>
-                                <div class="desc">
-                                    <p>
-
-                                    </p>
-                                    <!--copy-->
-                                </div>
-                                <div class="button">
-                                    <button onclick="">
-                                        <!--copy-->
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="Halloween" class="section">
-                <h1>Halloween Worlds</h1>
-                <div class="viewport">
-                    <div class="arrowleft"></div>
-                    <div class="arrowright"></div>
-                    <div class="image-container">
-						<div class="card">
-                            <img src="img/Worlds/HauntedAsylum.png" alt="HauntedAsylum">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Haunted Asylum</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Trapped within the confines of an abandoned asylum‚ try to find your way outǃ But beware‚ there's something lurking in the darknessǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_bd5fd91c-8369-438f-85d2-37ee593a5c36';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/HauntedGroundsRemastered.png" alt="HauntedGrounds">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Haunted Grounds Remastered</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        A Halloween party is being thrown at an abandoned mansionǃ Come join in the festivities‚ but beware what horrors await you in the darknessǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_99b59f03-fc8d-4373-a368-f85b14a4fce5';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/HauntedGrounds2PREVIEW.png" alt="Haunted Grounds 2 Preview">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Haunted Grounds 2 Preview</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        A huge Halloween party is being thrown in the middle of the cityǃ Enjoy the party and explore the city in the preview for Haunted Grounds 2ǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_cd8ebd7c-0753-4385-af1a-178e73e2d2c5';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card wrap">
-                            <!-- Do not touch (Copies first image) -->
-                            <img src="" alt="">
-                            <!--copy-->
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1></h1>
-                                    <!--copy-->
-                                </div>
-                                <div class="desc">
-                                    <p>
-
-                                    </p>
-                                    <!--copy-->
-                                </div>
-                                <div class="button">
-                                    <button onclick="">
-                                        <!--copy-->
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="other" class="section">
-                <h1>Other Worlds</h1>
-                <div class="viewport">
-                    <div class="arrowleft"></div>
-                    <div class="arrowright"></div>
-                    <div class="image-container">
-                        <div class="card">
-                            <img src="img/Worlds/SkyLanterns.png" alt="Sky Lanterns">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Sky Lanterns</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        Light a lantern and release it into the sky to let the show beginǃ Updated for Unity 2019․
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_317d7b78-5bf7-4c53-ad06-65d1608cb1b1';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="img/Worlds/FairyIsland.png" alt="Fairy Island">
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1>Fairy Island</h1>
-                                </div>
-                                <div class="desc">
-                                    <p>
-                                        A stormy sea surrounds Northern Fairy Island․ But inside‚ the great fairy fountain's peace is undisturbed․ Or it was‚ until you arrivedǃ
-                                    </p>
-                                </div>
-                                <div class="button">
-                                    <button onclick="window.location='https://vrchat.com/home/world/wrld_c1e135f2-4ad3-4315-b2ea-2a8a497b0eb3';">
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card wrap">
-                            <!-- Do not touch (Copies first image) -->
-                            <img src="" alt="">
-                            <!--copy-->
-                            <div class="details hide">
-                                <div class="title">
-                                    <h1></h1>
-                                    <!--copy-->
-                                </div>
-                                <div class="desc">
-                                    <p>
-
-                                    </p>
-                                    <!--copy-->
-                                </div>
-                                <div class="button">
-                                    <button onclick="">
-                                        <!--copy-->
-                                        <h3>
-                                            Launch World
-                                        </h3>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="back-to-top-btn">
-        <button id="To-Top">Back to Top</button>
-    </div>
-
-    <footer class="footer">
-        <div class="copyright">
-            <p>© 2026 Ostinyo Studios</p>
+    <div class="page-banner">
+        <div class="page-banner__bg"></div>
+        <div class="page-banner__content">
+            <h1>VRChat Worlds</h1>
+            <p>Check out my catalog of worlds built for VRChat!</p>
         </div>
+    </div>
+
+    <main class="page-content" style="padding-top:0">
+        <div class="section">
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="pvp">PVP</button>
+                <button class="filter-tab" data-filter="puttputt">Putt Putt</button>
+                <button class="filter-tab" data-filter="halloween">Halloween</button>
+                <button class="filter-tab" data-filter="upcoming">Coming Soon</button>
+            </div>
+
+            <!-- Worlds Grid -->
+            <div class="games-grid" id="worldsGrid">
+
+                <!-- Haunted Asylum 2 -->
+                <div class="game-card reveal" data-category="halloween">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/HauntedAsylum2.png" alt="Haunted Asylum 2">
+                        <div class="game-card__overlay">
+                            <!-- <p>Brave your fears and enter a new asylum․ Beware the monsters that lurk in the darkness and navigate through these haunted hallways to uncover the secrets withinǃ</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_81c3d295-5ee0-4e34-b864-5125beb1a214"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--halloween">Halloween</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Haunted Asylum 2</h3>
+                    </div>
+                </div>
+
+                <!-- Blackout -->
+                <div class="game-card reveal" data-category="pvp">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/Blackout.png" alt="Blackout!">
+                        <div class="game-card__overlay">
+                            <!-- <p>Murderers are on the loose! When the lights go out, they'll make their move. Work together to put a stop to their killing spree!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_e9093447-5e69-4eec-8262-358a4ad72db9"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--pvp">PVP</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Blackout!</h3>
+                    </div>
+                </div>
+
+                <!-- Haunted Grounds Remastered -->
+                <div class="game-card reveal" data-category="halloween">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/HauntedGroundsRemastered.png" alt="Haunted Grounds Remastered">
+                        <div class="game-card__overlay">
+                            <!-- <p>A Halloween party at an abandoned mansion! Join in the festivities, but beware what horrors await in the darkness!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_99b59f03-fc8d-4373-a368-f85b14a4fce5"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--halloween">Halloween</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Haunted Grounds Remastered</h3>
+                    </div>
+                </div>
+
+                <!-- Haunted Grounds 2 PREVIEW -->
+                <div class="game-card reveal" data-category="halloween">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/HauntedGrounds2PREVIEW.png" alt="Haunted Grounds 2 Preview">
+                        <div class="game-card__overlay">
+                            <!-- <p>A huge Halloween party in the middle of the city! Explore in this preview for Haunted Grounds 2!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_cd8ebd7c-0753-4385-af1a-178e73e2d2c5"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--halloween">Halloween</span>
+                        </div>
+                        <h3 class="game-card__title">Haunted Grounds 2 Preview</h3>
+                    </div>
+                </div>
+
+                <!-- Prison Escape -->
+                <div class="game-card reveal" data-category="pvp">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/PrisonEscape.png" alt="Prison Escape">
+                        <div class="game-card__overlay">
+                            <!-- <p>Join the fight between Prisoners and Guards in this VR prison! Plot your escape with friends or keep the prisoners in line!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_14750dd6-26a1-4edb-ae67-cac5bcd9ed6a"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--pvp">PVP</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Prison Escape</h3>
+                    </div>
+                </div>
+
+                <!-- Putt Putt Quest Night -->
+                <div class="game-card reveal" data-category="puttputt">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/PuttPuttQuestNight.png" alt="Putt Putt Quest Night">
+                        <div class="game-card__overlay">
+                            <!-- <p>Mini golf in the dark! Nighttime has fallen in the kingdom and golf balls glow. Do your best!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_0e813689-822d-4537-8e36-ce2f6e5db4d5"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Putt Putt Quest (Night)</h3>
+                    </div>
+                </div>
+
+                <!-- Putt Putt Quest -->
+                <div class="game-card reveal" data-category="puttputt">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/PuttPuttQuest.png" alt="Putt Putt Quest">
+                        <div class="game-card__overlay">
+                            <!-- <p>Mini golf in VR! Tackle my second mini golf world, now with Quest compatibility. Includes desktop controls.</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_70353369-ba69-46ab-a20b-f6112c82adba"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Putt Putt Quest</h3>
+                    </div>
+                </div>
+				
+                <!-- Squid Game RL/GL -->
+                <div class="game-card reveal" data-category="pvp">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/SquidGameRLGL.png" alt="Squid Game RL/GL">
+                        <div class="game-card__overlay">
+                            <!-- <p>Play a rendition of Red Light, Green Light based on the hit Netflix series "Squid Game"! Who will reach the finish line first?</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_c8c1c373-dd05-4095-a5f9-57cc1e2dcc33"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--pvp">PVP</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Squid Game RL/GL</h3>
+                    </div>
+                </div>
+
+                <!-- Haunted Asylum -->
+				<div class="game-card reveal" data-category="halloween">
+					<div class="game-card__img-wrap">
+                        <img src="img/Worlds/HauntedAsylum.png" alt="Haunted Asylum">
+                        <div class="game-card__overlay">
+                            <!-- <p>Trapped in an abandoned asylum, try to find your way out. Beware — there's something lurking in the darkness!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_bd5fd91c-8369-438f-85d2-37ee593a5c36"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--halloween">Halloween</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Haunted Asylum</h3>
+                    </div>
+                </div>
+
+                <!-- Putt Putt Pond -->
+                <div class="game-card reveal" data-category="puttputt">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/PuttPuttPond.png" alt="Putt Putt Pond">
+                        <div class="game-card__overlay">
+                            <!-- <p>Golf with friends in VR! Play on two 18-hole courses with fully scripted mini golf plus other games!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_ab68f896-a21f-4d72-a016-5a0a42c3158f"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                        </div>
+                        <h3 class="game-card__title">Putt Putt Pond</h3>
+                    </div>
+                </div>
+                
+                <!-- Trouble in Terrorist Town -->
+                <div class="game-card reveal" data-category="upcoming">
+                    <div class="game-card__img-wrap" style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(79,70,229,0.05))">
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.5rem;color:rgba(124,58,237,0.22)">
+                            <i class="fa-solid fa-skull"></i>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--beta">Beta</span>
+                            <span class="badge badge--pvp">PVP</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Trouble in Terrorist Town</h3>
+                    </div>
+                </div>
+
+                <!-- Prison Escape 2 -->
+                <div class="game-card reveal" data-category="upcoming">
+                    <div class="game-card__img-wrap" style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(79,70,229,0.05))">
+                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.5rem;color:rgba(124,58,237,0.22)">
+                            <i class="fa-solid fa-skull"></i>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--dev">In Development</span>
+                            <span class="badge badge--pvp">PVP</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Prison Escape 2</h3>
+                    </div>
+                </div>
+
+                <!-- Sky Lanterns -->
+                <div class="game-card reveal" data-category="other">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/SkyLanterns.png" alt="Sky Lanterns">
+                        <div class="game-card__overlay">
+                            <!-- <p>Light a lantern and release it into the sky to let the show begin!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_317d7b78-5bf7-4c53-ad06-65d1608cb1b1"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                        </div>
+                        <h3 class="game-card__title">Sky Lanterns</h3>
+                    </div>
+                </div>
+
+                <!-- Fairy Island -->
+                <div class="game-card reveal" data-category="other">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/FairyIsland.png" alt="Fairy Island">
+                        <div class="game-card__overlay">
+                            <!-- <p>A stormy sea surrounds Northern Fairy Island. The great fairy fountain's peace is undisturbed... or was, until you arrived!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_c1e135f2-4ad3-4315-b2ea-2a8a497b0eb3"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                        </div>
+                        <h3 class="game-card__title">Fairy Island</h3>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <div class="logo">
+                    <img src="img/favicon.png" alt="Ostinyo icon">
+                    <span>Ostinyo</span>
+                </div>
+                <!-- <p>VR game developer creating immersive worlds and experiences.</p> -->
+            </div>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="worlds.html">Worlds</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer__socials">
+                <h4>Socials</h4>
+                <div class="footer__socials-icons">
+                    <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                    <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener" aria-label="Patreon"><i class="fa-brands fa-patreon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">© 2026 Ostinyo Studios</div>
     </footer>
+
+    <button class="back-to-top btn btn--ghost" id="To-Top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="./js/scripts.js"></script>
 </body>
-
 </html>

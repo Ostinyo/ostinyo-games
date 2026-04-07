@@ -1,129 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ostinyo | Home</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="icon" href="./img/favicon.png" type="img/png"/>
-
-    <!-- Font Awesome-->
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/54ff652683.js" crossorigin="anonymous"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
 <body>
-    <header id="header" class="header">
-        <a href="./">
-            <div class="logo">
-                <img src="img/favicon.png" alt="Ostinyo Icon">
-                <h3>Ostinyo Games</h3>
-            </div>
+
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="img/favicon.png" alt="Ostinyo icon">
+            <span>Ostinyo</span>
         </a>
-
-
+        <nav class="desktop-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="worlds.html">Worlds</a>
+            <a href="games.html">Games</a>
+            <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a>
+            <a href="contact.html">Contact</a>
+        </nav>
         <div class="rightcorner">
-            <nav class="desktop-nav">
-                <a href="./">Home</a>
-                <span class="vertical-line"></span>
-                <a href='./worlds'>Worlds</a>
-                <span class="vertical-line"></span>
-                <a href="https://www.patreon.com/Ostinyo">Patreon</a>
-				<span class="vertical-line"></span>
-                <a href="mailto:contact@ostinyo.com">Contact</a>
-            </nav>
+            <a href="membership.html" class="btn-membership">Join Membership</a>
             <div class="socials">
-                <a href="https://Twitter.com/Ostinyo"><i class="fa-brands fa-x-twitter"></i></a>
-				<a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i></a>
-				<a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
             </div>
-            <button class="hamburger hamburger--slider" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
+            <button class="hamburger" type="button" aria-label="Toggle navigation">
+                <span class="hamburger-bars"><span></span><span></span><span></span></span>
             </button>
-
         </div>
     </header>
+
     <div class="menu">
-        <a href="./">Home</a>
-        <a href='./worlds'>Worlds</a>
-        <a href="https://www.patreon.com/Ostinyo">Patreon</a>
-        <a href="mailto:contact@ostinyo.com">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="worlds.html">Worlds</a>
+        <a href="games.html">Games</a>
+        <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a>
+        <a href="contact.html">Contact</a>
         <div class="menu-socials">
-            <a href="https://Twitter.com/Ostinyo"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i></a>
-            <a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://Twitter.com/Ostinyo" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://bsky.app/profile/ostinyo.bsky.social" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+            <a href="https://discord.com/invite/qnQSGDnHjm" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
         </div>
     </div>
-    <div class="body">
-        <section class="Body">
-            <div class="section section__about-me">
-                <img class="section__img about-me__img" src="img/FrontImage.png" alt="">
-                <div class="section__content">
-                    <h1>Creating your favorite VR games!</h1>
-                    <div class="section__content__text">
-                        <p>
-                            I'm a VR game developer with a passion for fun game design! I've created many game worlds for VRChat including Prison Escape, Haunted Asylum and Putt Putt Pond. Please check them out!
-                        </p>
 
-                        <p>
-                            Video games provide an infinitely creative space to have fun and connect with new people. I love being able to design new experiences and witness the joy that abounds from them. I look forward to continuing my development efforts and bringing dreams into virtual reality!
-                        </p>
+    <!-- ── Hero Carousel ─────────────────────────────────────── -->
+    <section class="hero-carousel">
+        <div class="featured-carousel" id="featuredCarousel">
+            <div class="featured-carousel__track" id="featuredTrack">
 
-                        <button onclick="window.location='./worlds'">View My Worlds</button>
+                <div class="featured-slide">
+                    <img class="featured-slide__img" src="img/Worlds/PrisonEscape_Banner.png" alt="Prison Escape">
+                    <div class="featured-slide__overlay"></div>
+                    <div class="featured-slide__content">
+                        <span class="featured-card__label">VRChat &nbsp;·&nbsp; PVP</span>
+                        <h2 class="featured-card__title">Prison Escape</h2>
+                        <p class="featured-card__desc">Join the fight between Prisoners and Guards in this VR prison! Plot your escape with friends or keep the prisoners in line.</p>
+                        <a href="https://vrchat.com/home/world/wrld_14750dd6-26a1-4edb-ae67-cac5bcd9ed6a" target="_blank" rel="noopener" class="btn btn--primary" style="width:fit-content">Launch World</a>
                     </div>
                 </div>
+
+                <div class="featured-slide">
+                    <img class="featured-slide__img" src="img/Worlds/Blackout_Banner.png" alt="Blackout!">
+                    <div class="featured-slide__overlay"></div>
+                    <div class="featured-slide__content">
+                        <span class="featured-card__label">VRChat &nbsp;·&nbsp; PVP</span>
+                        <h2 class="featured-card__title">Blackout!</h2>
+                        <p class="featured-card__desc">Murderers are on the loose! When the lights go out, they'll make their move. Work together to put a stop to their killing spree!</p>
+                        <a href="https://vrchat.com/home/world/wrld_e9093447-5e69-4eec-8262-358a4ad72db9" target="_blank" rel="noopener" class="btn btn--primary" style="width:fit-content">Launch World</a>
+                    </div>
+                </div>
+
+                <div class="featured-slide">
+                    <img class="featured-slide__img" src="img/Worlds/HauntedAsylum2_Banner.png" alt="Haunted Asylum 2">
+                    <div class="featured-slide__overlay"></div>
+                    <div class="featured-slide__content">
+                        <span class="featured-card__label">VRChat &nbsp;·&nbsp; Halloween</span>
+                        <h2 class="featured-card__title">Haunted Asylum 2</h2>
+                        <p class="featured-card__desc">Brave your fears and enter a new asylum. Beware the monsters that lurk in the darkness and navigate these haunted hallways!</p>
+                        <a href="https://vrchat.com/home/world/wrld_81c3d295-5ee0-4e34-b864-5125beb1a214" target="_blank" rel="noopener" class="btn btn--primary" style="width:fit-content">Launch World</a>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="section section__twitter">
-                <div class="section__content">
-                    <h1>Keep up to date! &nbsp;
-						<a href="https://twitter.com/ostinyo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @Ostinyo</a>
-						<a href="https://bsky.app/profile/ostinyo.bsky.social"><i class="fa-brands fa-bluesky"></i></a>
-                    </h1>
-					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <div class="section__content__text">
-                        <p>
-                            I post world updates and launch announcements on Twitter, Bluesky and Discord. <br> Follow me on Twitter/Bluesky for the latest news!<br><br>
-                        </p>
-                    </div>
-					<h1>Join my community! &nbsp; <a href="https://discord.com/invite/qnQSGDnHjm"><i class="fa-brands fa-discord"></i></a></h1>
-                    <div class="section__content__text">
-                        <p>
-                            Join my Discord server to discuss my worlds and view development progress!
-                        </p>
-                    </div>
-                </div>
-                <div class="section__img twitter__img">
-                    <!--<a class="twitter-timeline" data-width="80%" data-height="1000" data-theme="dark" href="https://twitter.com/Ostinyo?ref_src=twsrc%5Etfw">Tweets by Ostinyo</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-					
-					<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
-					<bsky-embed
-						username="ostinyo.bsky.social"
-						mode="dark"
-						limit="5"
-					>
-					</bsky-embed>
-                </div>
+            <button class="featured-carousel__btn featured-carousel__btn--prev" id="featuredPrev" aria-label="Previous slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="featured-carousel__btn featured-carousel__btn--next" id="featuredNext" aria-label="Next slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="featured-carousel__dots" id="featuredDots">
+                <button class="featured-carousel__dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="featured-carousel__dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="featured-carousel__dot" data-index="2" aria-label="Slide 3"></button>
             </div>
-        </section>
-    </div>
-
-    <!--<div class="back-to-top-btn">
-        <button id="To-Top">Back to Top</button>
-    </div>-->
-
-    <footer class="footer">
-        <div class="copyright">
-            <p>© 2026 Ostinyo Studios</p>
         </div>
+        <div class="hero-carousel__scroll" aria-hidden="true">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <main style="margin-top:4rem">
+
+        <!-- ── Latest Worlds ───────────────────────────────── -->
+        <div class="section reveal">
+            <div class="section__header">
+                <h2>Latest Worlds</h2>
+                <a href="worlds.html">View all &rarr;</a>
+            </div>
+            <div class="games-grid">
+
+				<div class="game-card reveal" data-category="halloween">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/HauntedAsylum2.png" alt="Haunted Asylum 2">
+                        <div class="game-card__overlay">
+                            <!-- <p>Brave your fears and enter a new asylum․ Beware the monsters that lurk in the darkness and navigate through these haunted hallways to uncover the secrets withinǃ</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_81c3d295-5ee0-4e34-b864-5125beb1a214"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--halloween">Halloween</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Haunted Asylum 2</h3>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/Blackout.png" alt="Blackout!">
+                        <div class="game-card__overlay">
+                            <!-- <p>Murderers are on the loose! When the lights go out, they'll make their move. Work together to stop them!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_e9093447-5e69-4eec-8262-358a4ad72db9"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--pvp">PVP</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Blackout!</h3>
+                    </div>
+                </div>
+
+                <!-- Haunted Grounds Remastered -->
+                <div class="game-card reveal" data-category="halloween">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/HauntedGroundsRemastered.png" alt="Haunted Grounds Remastered">
+                        <div class="game-card__overlay">
+                            <!-- <p>A Halloween party at an abandoned mansion! Join in the festivities, but beware what horrors await in the darkness!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_99b59f03-fc8d-4373-a368-f85b14a4fce5"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--halloween">Halloween</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Haunted Grounds Remastered</h3>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-card__img-wrap">
+                        <img src="img/Worlds/PuttPuttQuest.png" alt="Putt Putt Quest">
+                        <div class="game-card__overlay">
+                            <!-- <p>Mini golf in VR! Tackle my second mini golf world, now with Quest compatibility. Good luck golfing!</p> -->
+                            <a href="https://vrchat.com/home/world/wrld_70353369-ba69-46ab-a20b-f6112c82adba"
+                               target="_blank" rel="noopener" class="btn btn--primary">Launch World</a>
+                        </div>
+                    </div>
+                    <div class="game-card__info">
+                        <div class="game-card__badges">
+
+                            <span class="badge badge--released">Released</span>
+                            <span class="badge badge--platform">Quest</span>
+                        </div>
+                        <h3 class="game-card__title">Putt Putt Quest</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── Community ───────────────────────────────────── -->
+        <div class="section reveal">
+            <div class="section__header">
+                <h2>Community</h2>
+            </div>
+            <div class="community-layout">
+                <div class="community-cards">
+                    <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" class="community-card">
+                        <div class="community-card__icon"><i class="fa-brands fa-discord"></i></div>
+                        <h3>Join my Discord community!</h3>
+                        <p>Discuss worlds, follow development progress, and hang out with the community.</p>
+                        <span class="btn btn--ghost" style="width:fit-content;margin-top:.25rem">Join Server</span>
+                    </a>
+                    <div class="community-card">
+                        <div class="community-card__icon">
+                            <i class="fa-brands fa-x-twitter"></i>&nbsp;&nbsp;<i class="fa-brands fa-bluesky"></i>
+                        </div>
+                        <h3>Follow @Ostinyo on Twitter &amp; Bluesky!</h3>
+                        <p>World updates and launch announcements. Stay in the loop on everything coming next.</p>
+                        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.25rem">
+                            <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" class="btn btn--ghost" style="width:fit-content"><i class="fa-brands fa-x-twitter"></i> Follow</a>
+                            <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" class="btn btn--ghost" style="width:fit-content"><i class="fa-brands fa-bluesky"></i> Follow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bluesky-panel">
+                    <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
+                    <bsky-embed username="ostinyo.bsky.social" mode="dark" limit="5"></bsky-embed>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <div class="logo">
+                    <img src="img/favicon.png" alt="Ostinyo icon">
+                    <span>Ostinyo</span>
+                </div>
+                <!-- <p>Designing immersive worlds and experiences.</p> -->
+            </div>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="worlds.html">Worlds</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener">Patreon</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer__socials">
+                <h4>Socials</h4>
+                <div class="footer__socials-icons">
+                    <a href="https://Twitter.com/Ostinyo" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://bsky.app/profile/ostinyo.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                    <a href="https://discord.com/invite/qnQSGDnHjm" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.patreon.com/Ostinyo" target="_blank" rel="noopener" aria-label="Patreon"><i class="fa-brands fa-patreon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">© 2026 Ostinyo Studios</div>
     </footer>
+
+    <button class="back-to-top btn btn--ghost" id="To-Top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="./js/scripts.js"></script>
 </body>
-
 </html>
