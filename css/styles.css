@@ -64,6 +64,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
+    background-attachment: fixed;
     color: var(--clr-text);
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -347,6 +348,10 @@ header {
     color: var(--clr-muted);
     font-size: 1.1rem;
     animation: hero-bounce 2s ease-in-out infinite;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 @keyframes hero-bounce {
@@ -553,6 +558,10 @@ header {
 }
 .featured-carousel__btn--prev { left: 1.75rem; }
 .featured-carousel__btn--next { right: 1.75rem; }
+
+@media (max-width: 600px) {
+    .featured-carousel__btn { display: none; }
+}
 
 .featured-carousel__dots {
     position: absolute;

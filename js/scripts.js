@@ -17,6 +17,14 @@ if (mobileButton && menu) {
     });
 }
 
+// ── Hero scroll indicator ────────────────────────────────────────
+const heroScrollBtn = document.getElementById('heroScrollBtn');
+if (heroScrollBtn) {
+    heroScrollBtn.addEventListener('click', () => {
+        document.getElementById('latest-worlds')?.scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
 // ── Back to top ─────────────────────────────────────────────────
 const topBtn = document.getElementById('To-Top');
 const header = document.getElementById('header');
@@ -34,8 +42,7 @@ window.addEventListener('scroll', () => {
         topBtn.classList.toggle('visible', y > header.offsetHeight);
     }
 
-    // Background parallax
-    document.body.style.backgroundPositionY = (y * 0.35) + 'px';
+
 }, { passive: true });
 
 // ── Featured Carousel ───────────────────────────────────────────
@@ -124,6 +131,21 @@ if (featuredTrack) {
     featuredDots?.querySelectorAll('.featured-carousel__dot').forEach(dot => {
         dot.addEventListener('click', () => { goTo(+dot.dataset.index); resetAuto(); });
     });
+
+    // Touch swipe
+    let touchStartX = 0;
+    let touchStartY = 0;
+    featuredTrack.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    featuredTrack.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+        if (dx < 0) { goTo(current + 1); } else { goTo(current - 1); }
+        resetAuto();
+    }, { passive: true });
 
     // Initialise
     activateSlide(0);
